@@ -25,12 +25,12 @@ class App extends Component {
             <StyleRoot>
                 <Theme muiTheme={theme}>
                     <Router>
+                      <div style={{ height: '100vh' }}>
                         <Switch>
-                            <div style={{ height: '100vh' }}>
-                                <Route path='/chat/' render={(props) => (<AllChats {...props} userData={data.users} />)} />
-                                <Route path='/unique_chat' render={() => (<ChatConversation web={true} them={data.user1} me={data.user2} messagesMe={data.messageOfUser1} />)} />
-                            </div>
+                            <Route path='/chat/' render={(props) => (<AllChats {...props} userData={data.users} />)} />
+                            <Route path='/unique_chat' render={(props) => (<ChatConversation {...props} web={true} them={data.user1} me={data.user2} messagesMe={data.messageOfUser1} />)} />
                         </Switch>
+                        </div>
                     </Router>
                 </Theme>
             </StyleRoot>

@@ -131,7 +131,7 @@ class ChatConversation extends Component {
         return (
             <div>
                 {this.props.web ? <div className="chat-list" style={style.chatList}>
-                    <AllChats web={this.props.web} userData={data.users} />
+                    <AllChats history={this.props.history} web={this.props.web} userData={data.users} />
                 </div> : <span></span>}
                 <div style={style.elementStyleContainer}>
                     <AppBar

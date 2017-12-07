@@ -79,7 +79,7 @@ const AllChats = (props) => {
             </div>
             <ChatList>
                 {props.userData.map((unitData, i) => (
-                    <span style={{ marginBottom: '1px' }}>
+                    <span key={i} style={{ marginBottom: '1px' }}>
                         <ChatUnit
                             key={i}
                             name={unitData.profile.name}
